@@ -69,7 +69,14 @@ push:
 		patch=$$(($$patch + 1)); \
 		new_version="$$major.$$minor.$$patch"; \
 		sed -i "" "s/^version:.*/version: $$new_version/" pubspec.yaml; \
-		sed -i "" "1s/^/## $$new_version\n\n- Updates and improvements.\n\n/" CHANGELOG.md; \
+		last_tag=$$(git describe --tags --abbrev=0 2>/dev/null); \
+		if [ -n "$$last_tag" ]; then \
+			changes=$$(git log $$last_tag..HEAD --no-merges --pretty=format:"- %s"); \
+		else \
+			changes=$$(git log --no-merges --pretty=format:"- %s"); \
+		fi; \
+		[ -z "$$changes" ] && changes="- Updates and improvements."; \
+		{ printf "## %s\n\n%s\n\n" "$$new_version" "$$changes"; cat CHANGELOG.md; } > CHANGELOG.tmp && mv CHANGELOG.tmp CHANGELOG.md; \
 		git add pubspec.yaml CHANGELOG.md; \
 		git commit -m "Bump version to $$new_version"; \
 		git tag v$$new_version; \
