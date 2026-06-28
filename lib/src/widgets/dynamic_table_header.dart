@@ -51,7 +51,7 @@ class DynamicTableHeader extends StatelessWidget {
       onClear: onClearSearch,
       hasText: hasSearchText,
       hintText: config.searchHint,
-      width: isMobile ? null : double.infinity,
+      width: isMobile ? null : 320,
     );
 
     final dateFilter = (enableDateFilter && onDateFilterChanged != null)
@@ -106,10 +106,11 @@ class DynamicTableHeader extends StatelessWidget {
       );
     }
 
-    // Desktop: icon + title left, search centered, controls right.
+    // Desktop: icon + title leftmost, search + controls grouped rightmost.
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           if (tableName != null && tableName!.isNotEmpty)
@@ -137,24 +138,24 @@ class DynamicTableHeader extends StatelessWidget {
             )
           else
             const SizedBox.shrink(),
-          // Centered search between title and controls.
-          Expanded(
-            child: Center(
-              child: ConstrainedBox(
-                constraints: const BoxConstraints(maxWidth: 420),
-                child: searchField,
-              ),
-            ),
+          const SizedBox(width: 16),
+          // Search + controls grouped at right.
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              searchField,
+              if (dateFilter != null) ...[
+                const SizedBox(width: 8),
+                dateFilter,
+              ],
+              const SizedBox(width: 8),
+              columnsButton,
+              if (exportButton != null) ...[
+                const SizedBox(width: 4),
+                exportButton,
+              ],
+            ],
           ),
-          if (dateFilter != null) ...[
-            dateFilter,
-            const SizedBox(width: 8),
-          ],
-          columnsButton,
-          if (exportButton != null) ...[
-            const SizedBox(width: 4),
-            exportButton,
-          ],
         ],
       ),
     );

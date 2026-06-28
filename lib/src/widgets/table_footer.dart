@@ -207,11 +207,25 @@ class TablePaginationFooter extends StatelessWidget {
       ],
     );
 
+    final borderSide = BorderSide(
+      color: theme.colorScheme.outline.withValues(alpha: 0.15),
+      width: 0.5,
+    );
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       decoration: BoxDecoration(
         color: theme.cardColor,
-        border: const Border(top: BorderSide(color: Colors.black12)),
+        border: Border(
+          top: borderSide,
+          left: borderSide,
+          right: borderSide,
+          bottom: borderSide,
+        ),
+        borderRadius: const BorderRadius.only(
+          bottomLeft: Radius.circular(12),
+          bottomRight: Radius.circular(12),
+        ),
       ),
 
       /// 🔥 RESPONSIVE SWITCH
