@@ -1,6 +1,6 @@
 name: dynamic_data_table
 description: A production-grade, highly customizable Flutter data table widget with sorting, filtering, pagination, row selection, and pluggable export formats. pub.dev ready.
-version: 1.0.3
+version: 1.0.4
 
 homepage: https://github.com/subash9860/dynamic_data_table
 repository: https://github.com/subash9860/dynamic_data_table
