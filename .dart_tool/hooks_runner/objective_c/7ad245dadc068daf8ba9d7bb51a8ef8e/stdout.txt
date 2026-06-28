@@ -1,0 +1,54 @@
+Running `(cd /Users/subashkc/.pub-cache/hosted/pub.dev/objective_c-9.4.1/; ANDROID_HOME=/Users/subashkc/Library/Android/sdk TMPDIR=/var/folders/kp/srb2sbx12s9fzyt86kwggcyc0000gn/T/ PATH=/Users/subashkc/lib/oracle-cli/bin:/Users/subashkc/.antigravity-ide/antigravity-ide/bin:/Users/subashkc/bin:/Users/subashkc/lib/oracle-cli/bin:/Users/subashkc/.antigravity/antigravity/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/Library/Apple/usr/bin:/Users/subashkc/.local/bin:/opt/homebrew/Caskroom/flutter/3.29.0/flutter/bin:/Users/subashkc/.antigravity-ide/antigravity-ide/bin:/Users/subashkc/bin:/Users/subashkc/lib/oracle-cli/bin:/Users/subashkc/.antigravity/antigravity/bin:/Users/subashkc/Library/Android/sdk/platform-tools:/Users/subashkc/Library/Android/sdk/tools:/Users/subashkc/.pub-cache/bin:/Users/subashkc/Library/Android/sdk/platform-tools:/Users/subashkc/Library/Android/sdk/tools:/Users/subashkc/.pub-cache/bin:/Users/subashkc/.claude/plugins/cache/caveman/caveman/84cc3c14fa1e/bin:/Users/subashkc/.claude/plugins/cache/claude-plugins-official/figma/2.2.68/bin HOME=/Users/subashkc /opt/homebrew/Caskroom/flutter/3.29.0/flutter/bin/cache/dart-sdk/bin/dart --packages=/Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/package_config.json /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/objective_c/7ad245dadc068daf8ba9d7bb51a8ef8e/hook.dill --config=/Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/objective_c/7ad245dadc068daf8ba9d7bb51a8ef8e/input.json )`.
+INFO: 2026-06-28 21:45:30.655118: Using compiler /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang from BuildInput.cCompiler.cc.
+
+INFO: 2026-06-28 21:45:30.657775: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-darwin -mmacos-version-min=13 -c /Users/subashkc/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/include/dart_api_dl.c -fpic -gline-tables-only -I src -o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/include/dart_api_dl.c.o
+
+INFO: 2026-06-28 21:45:30.658874: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/subashkc/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/input_stream_adapter.m -fpic -gline-tables-only -I src -o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/input_stream_adapter.m.o
+
+INFO: 2026-06-28 21:45:30.659156: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/subashkc/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/ns_number.m -fpic -gline-tables-only -I src -o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/ns_number.m.o
+
+.o
+INFO: 2026-06-28 21:45:30.659067: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/subashkc/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/observer.m -fpic -gline-tables-only -I src -o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/observer.m.o
+
+INFO: 2026-06-28 21:45:30.659284: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/subashkc/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/protocol.m -fpic -gline-tables-only -I src -o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/protocol.m.o
+
+INFO: 2026-06-28 21:45:30.659405: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/subashkc/.pub-cache/hosted/pub.dev/objective_c-9.4.1/src/objective_c_bindings_generated.m -fpic -gline-tables-only -I src -o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/objective_c_bindings_generated.m.o
+
+INFO: 2026-06-28 21:45:30.869239: 
+INFO: 2026-06-28 21:45:30.869369: 
+INFO: 2026-06-28 21:45:30.869414: Generated /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/objective_c.c.o
+
+INFO: 2026-06-28 21:45:30.869831: 
+INFO: 2026-06-28 21:45:30.869872: 
+INFO: 2026-06-28 21:45:30.869893: Generated /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/include/dart_api_dl.c.o
+
+INFO: 2026-06-28 21:45:30.870931: 
+INFO: 2026-06-28 21:45:30.870959: 
+INFO: 2026-06-28 21:45:30.870970: Generated /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/observer.m.o
+
+INFO: 2026-06-28 21:45:30.873007: 
+INFO: 2026-06-28 21:45:30.873032: 
+INFO: 2026-06-28 21:45:30.873041: Generated /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/protocol.m.o
+
+INFO: 2026-06-28 21:45:31.096438: 
+INFO: 2026-06-28 21:45:31.096475: 
+INFO: 2026-06-28 21:45:31.096497: Generated /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/ns_number.m.o
+
+INFO: 2026-06-28 21:45:31.102674: 
+INFO: 2026-06-28 21:45:31.102709: 
+INFO: 2026-06-28 21:45:31.102719: Generated /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/objective_c.m.o
+
+INFO: 2026-06-28 21:45:31.104752: 
+INFO: 2026-06-28 21:45:31.104776: 
+INFO: 2026-06-28 21:45:31.104785: Generated /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/input_stream_adapter.m.o
+
+INFO: 2026-06-28 21:45:31.119967: 
+INFO: 2026-06-28 21:45:31.119995: 
+INFO: 2026-06-28 21:45:31.120004: Generated /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/objective_c_bindings_generated.m.o
+
+INFO: 2026-06-28 21:45:31.120262: Running: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -shared -Wl,-encryptable -undefined dynamic_lookup -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk -target arm64-apple-darwin -mmacos-version-min=13 /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/include/dart_api_dl.c.o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/objective_c.c.o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/input_stream_adapter.m.o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/objective_c.m.o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/observer.m.o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/ns_number.m.o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/protocol.m.o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/obj/src/objective_c_bindings_generated.m.o -o /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/objective_c.dylib
+
+INFO: 2026-06-28 21:45:31.234375: 
+INFO: 2026-06-28 21:45:31.234420: 
+INFO: 2026-06-28 21:45:31.234430: Generated /Users/subashkc/project/restro-management/dynamic_data_table/.dart_tool/hooks_runner/shared/objective_c/build/7ad245dadc/objective_c.dylib
+

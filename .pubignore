@@ -1,0 +1,26 @@
+# Documentation (not needed in published package)
+SUMMARY.md
+IMPROVEMENTS.md
+PUB_DEV_CHECKLIST.md
+
+# Tests (typically not included)
+test/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Build artifacts
+.dart_tool/
+build/
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Platform-specific files
+.github/workflows/
