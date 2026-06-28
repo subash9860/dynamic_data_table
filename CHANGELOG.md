@@ -1,3 +1,7 @@
+## 1.0.8
+
+- Updates and improvements.
+
 ## 1.0.7
 
 - Updates and improvements.
