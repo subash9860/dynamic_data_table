@@ -23,6 +23,8 @@ class Item {
 }
 
 class DynamicTableExample extends StatefulWidget {
+  const DynamicTableExample({super.key});
+
   @override
   State<DynamicTableExample> createState() => _DynamicTableExampleState();
 }
@@ -172,7 +174,7 @@ class _DynamicTableExampleState extends State<DynamicTableExample> {
                 // Search & filter
                 onSearch: (searchTerm) {
                   // Handle remote search if needed
-                  print('Searching: $searchTerm');
+                  debugPrint('Searching: $searchTerm');
                 },
                 searchStringBuilder: (item) => '${item.name} ${item.id}',
 
@@ -213,7 +215,7 @@ class _DynamicTableExampleState extends State<DynamicTableExample> {
                 enableDateFilter: true,
                 onDateFilterChanged: (dateFilter) {
                   // Handle date filter
-                  print('Date filter: $dateFilter');
+                  debugPrint('Date filter: $dateFilter');
                 },
               ),
             ),
@@ -252,7 +254,7 @@ class _DynamicTableExampleState extends State<DynamicTableExample> {
         filterValueBuilder: (item) => item.name,
         exportValueBuilder: (item) => item.name,
         size: ColumnSize.L,
-        onSort: (idx, asc) => print('Sort by name: ${asc ? "ASC" : "DESC"}'),
+        onSort: (idx, asc) => debugPrint('Sort by name: ${asc ? "ASC" : "DESC"}'),
       ),
       ColumnDef<Item>(
         id: 'price',
@@ -262,9 +264,9 @@ class _DynamicTableExampleState extends State<DynamicTableExample> {
         cellBuilder: (item) => DataCell(
           Text('\$${item.price.toStringAsFixed(2)}'),
         ),
-        exportValueBuilder: (item) => '${item.price.toStringAsFixed(2)}',
+        exportValueBuilder: (item) => item.price.toStringAsFixed(2),
         size: ColumnSize.M,
-        onSort: (idx, asc) => print('Sort by price: ${asc ? "ASC" : "DESC"}'),
+        onSort: (idx, asc) => debugPrint('Sort by price: ${asc ? "ASC" : "DESC"}'),
       ),
       ColumnDef<Item>(
         id: 'quantity',
@@ -275,7 +277,7 @@ class _DynamicTableExampleState extends State<DynamicTableExample> {
         exportValueBuilder: (item) => '${item.quantity}',
         size: ColumnSize.S,
         onSort: (idx, asc) =>
-            print('Sort by quantity: ${asc ? "ASC" : "DESC"}'),
+            debugPrint('Sort by quantity: ${asc ? "ASC" : "DESC"}'),
       ),
       ColumnDef<Item>(
         id: 'status',
@@ -304,7 +306,7 @@ class _DynamicTableExampleState extends State<DynamicTableExample> {
         filterValueBuilder: (item) => item.status,
         exportValueBuilder: (item) => item.status,
         size: ColumnSize.M,
-        onSort: (idx, asc) => print('Sort by status: ${asc ? "ASC" : "DESC"}'),
+        onSort: (idx, asc) => debugPrint('Sort by status: ${asc ? "ASC" : "DESC"}'),
       ),
       ColumnDef<Item>(
         id: 'createdAt',
@@ -321,7 +323,7 @@ class _DynamicTableExampleState extends State<DynamicTableExample> {
             '${item.createdAt.year}-${item.createdAt.month}-${item.createdAt.day}',
         size: ColumnSize.M,
         onSort: (idx, asc) =>
-            print('Sort by createdAt: ${asc ? "ASC" : "DESC"}'),
+            debugPrint('Sort by createdAt: ${asc ? "ASC" : "DESC"}'),
       ),
     ];
   }
