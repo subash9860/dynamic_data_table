@@ -19,7 +19,9 @@ class SortIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final color = isActive ? theme.colorScheme.primary : Colors.grey.withValues(alpha: 0.4);
+    final color = isActive
+        ? theme.colorScheme.primary
+        : Colors.grey.withValues(alpha: 0.4);
 
     return SizedBox(
       width: 24,

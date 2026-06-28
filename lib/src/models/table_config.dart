@@ -64,14 +64,17 @@ class TableConfig {
       applyLabel: applyLabel ?? this.applyLabel,
       cancelLabel: cancelLabel ?? this.cancelLabel,
       tableAriaLabel: tableAriaLabel ?? this.tableAriaLabel,
-      rowSelectionAriaLabel: rowSelectionAriaLabel ?? this.rowSelectionAriaLabel,
+      rowSelectionAriaLabel:
+          rowSelectionAriaLabel ?? this.rowSelectionAriaLabel,
       canExport: canExport ?? this.canExport,
       exportFileName: exportFileName ?? this.exportFileName,
       enableRowSelection: enableRowSelection ?? this.enableRowSelection,
       enableLoadingState: enableLoadingState ?? this.enableLoadingState,
       enableSortIndicators: enableSortIndicators ?? this.enableSortIndicators,
-      enableKeyboardNavigation: enableKeyboardNavigation ?? this.enableKeyboardNavigation,
-      enableAdvancedFiltering: enableAdvancedFiltering ?? this.enableAdvancedFiltering,
+      enableKeyboardNavigation:
+          enableKeyboardNavigation ?? this.enableKeyboardNavigation,
+      enableAdvancedFiltering:
+          enableAdvancedFiltering ?? this.enableAdvancedFiltering,
     );
   }
 }

@@ -125,7 +125,8 @@ class _DynamicDataTableState<T> extends State<DynamicDataTable<T>> {
   void _toggleRowSelection(int index) {
     setState(() {
       _selectedRows.toggleRow(index);
-      widget.onRowSelectionChanged?.call(_selectedRows.getSelectedItems(widget.data));
+      widget.onRowSelectionChanged
+          ?.call(_selectedRows.getSelectedItems(widget.data));
     });
   }
 
@@ -136,7 +137,8 @@ class _DynamicDataTableState<T> extends State<DynamicDataTable<T>> {
       } else {
         _selectedRows.selectAll(widget.data.length);
       }
-      widget.onRowSelectionChanged?.call(_selectedRows.getSelectedItems(widget.data));
+      widget.onRowSelectionChanged
+          ?.call(_selectedRows.getSelectedItems(widget.data));
     });
   }
 
@@ -388,22 +390,20 @@ class _DynamicDataTableState<T> extends State<DynamicDataTable<T>> {
                     onRowsPerPageChanged: widget.onPageChanged != null
                         ? (newLimit) => widget.onPageChanged!(1, newLimit)
                         : (_) {},
-                    onPrevious:
-                        widget.onPageChanged != null &&
+                    onPrevious: widget.onPageChanged != null &&
                             (widget.pagination?.page ?? 1) > 1
                         ? () => widget.onPageChanged!(
-                            (widget.pagination?.page ?? 1) - 1,
-                            widget.pagination?.limit ?? 25,
-                          )
+                              (widget.pagination?.page ?? 1) - 1,
+                              widget.pagination?.limit ?? 25,
+                            )
                         : () {},
-                    onNext:
-                        widget.onPageChanged != null &&
+                    onNext: widget.onPageChanged != null &&
                             (widget.pagination?.page ?? 1) <
                                 (widget.pagination?.totalPages ?? 1)
                         ? () => widget.onPageChanged!(
-                            (widget.pagination?.page ?? 1) + 1,
-                            widget.pagination?.limit ?? 25,
-                          )
+                              (widget.pagination?.page ?? 1) + 1,
+                              widget.pagination?.limit ?? 25,
+                            )
                         : () {},
                   ),
               ],

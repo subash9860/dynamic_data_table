@@ -64,8 +64,7 @@ class DateFilterValue {
         return _startOfDay(now.subtract(Duration(days: weekday - 1)));
       case DateFilterPreset.lastWeek:
         final weekday = now.weekday;
-        final startOfThisWeek =
-            now.subtract(Duration(days: weekday - 1));
+        final startOfThisWeek = now.subtract(Duration(days: weekday - 1));
         return _startOfDay(startOfThisWeek.subtract(const Duration(days: 7)));
       case DateFilterPreset.thisMonth:
         return DateTime(now.year, now.month, 1);
@@ -92,10 +91,8 @@ class DateFilterValue {
         return _endOfDay(now.add(Duration(days: 7 - weekday)));
       case DateFilterPreset.lastWeek:
         final weekday = now.weekday;
-        final startOfThisWeek =
-            now.subtract(Duration(days: weekday - 1));
-        final endOfLastWeek =
-            startOfThisWeek.subtract(const Duration(days: 1));
+        final startOfThisWeek = now.subtract(Duration(days: weekday - 1));
+        final endOfLastWeek = startOfThisWeek.subtract(const Duration(days: 1));
         return _endOfDay(endOfLastWeek);
       case DateFilterPreset.thisMonth:
         return _endOfDay(DateTime(now.year, now.month + 1, 0));

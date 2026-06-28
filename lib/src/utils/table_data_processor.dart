@@ -64,8 +64,8 @@ class TableDataProcessor<T> {
     final searchFiltered = useRemoteSearch
         ? data
         : (searchTerm.isEmpty
-              ? data
-              : data.where((item) => matchesSearch(item, searchTerm)).toList());
+            ? data
+            : data.where((item) => matchesSearch(item, searchTerm)).toList());
 
     // 2. Apply column filters
     if (activeFilters.isEmpty) return searchFiltered;

@@ -26,12 +26,10 @@ class TableDateFilter extends StatelessWidget {
               ? theme.colorScheme.primary
               : theme.colorScheme.outline.withValues(alpha: 0.4),
         ),
-        backgroundColor: isActive
-            ? theme.colorScheme.primary.withValues(alpha: 0.08)
-            : null,
-        foregroundColor: isActive
-            ? theme.colorScheme.primary
-            : theme.colorScheme.onSurface,
+        backgroundColor:
+            isActive ? theme.colorScheme.primary.withValues(alpha: 0.08) : null,
+        foregroundColor:
+            isActive ? theme.colorScheme.primary : theme.colorScheme.onSurface,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         visualDensity: VisualDensity.compact,
       ),
@@ -116,11 +114,11 @@ class _DateFilterDialogState extends State<_DateFilterDialog> {
   }
 
   DateFilterValue get _buildValue => DateFilterValue(
-    preset: _selected,
-    customDate: _customDate,
-    rangeStart: _rangeStart,
-    rangeEnd: _rangeEnd,
-  );
+        preset: _selected,
+        customDate: _customDate,
+        rangeStart: _rangeStart,
+        rangeEnd: _rangeEnd,
+      );
 
   void _apply() => Navigator.of(context).pop(_buildValue);
   void _clear() => Navigator.of(context).pop(const _ClearSentinel());
@@ -363,9 +361,8 @@ class _DatePickerTile extends StatelessWidget {
                       color: hasValue
                           ? theme.colorScheme.onSurface
                           : theme.colorScheme.onSurface.withValues(alpha: 0.45),
-                      fontWeight: hasValue
-                          ? FontWeight.w500
-                          : FontWeight.normal,
+                      fontWeight:
+                          hasValue ? FontWeight.w500 : FontWeight.normal,
                     ),
                   ),
                 ],
