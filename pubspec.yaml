@@ -8,8 +8,8 @@ repository: https://github.com/subash9860/dynamic_data_table
 issue_tracker: https://github.com/subash9860/dynamic_data_table/issues
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
-  flutter: '>=3.10.0'
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
 
 dependencies:
   flutter:
@@ -18,8 +18,9 @@ dependencies:
   intl: ^0.20.2
   file_saver: ^0.0.7
   open_file: ^3.5.11
+  path_provider: ^2.1.0
   web: ^1.1.1
-  syncfusion_flutter_xlsio: ^32.2.9
+  syncfusion_flutter_xlsio: ^31.1.19
 
 dev_dependencies:
   flutter_test:
