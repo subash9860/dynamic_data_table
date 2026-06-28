@@ -1,3 +1,7 @@
+## 1.0.1
+
+- Updates and improvements.
+
 ## 1.0.0
 
 Initial production-grade release with complete feature set:
