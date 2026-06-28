@@ -1,3 +1,7 @@
+## 1.0.6
+
+- fix: make hearder ui better
+
 ## 1.0.5
 
 - Updates and improvements.
