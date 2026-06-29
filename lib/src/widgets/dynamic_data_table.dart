@@ -13,32 +13,80 @@ import '../utils/table_data_processor.dart';
 import '../models/table_config.dart';
 import '../models/row_selection_state.dart';
 
-enum TableLoadingState { idle, loading, error }
+/// The data-loading status of a [DynamicDataTable].
+enum TableLoadingState {
+  /// Data is loaded and ready to display.
+  idle,
 
+  /// Data is currently being fetched.
+  loading,
+
+  /// Data loading failed.
+  error,
+}
+
+/// A feature-rich, generic data table with search, filtering, sorting,
+/// pagination, row selection, date filtering and export.
+///
+/// Supply [data] and [columns] (a list of [ColumnDef]) and a [TableConfig].
+/// For server-driven data, provide [pagination], [onPageChanged] and
+/// optionally [onSearch].
 class DynamicDataTable<T> extends StatefulWidget {
+  /// The rows to display (the current page when paginated).
   final List<T> data;
+
+  /// Pagination metadata; when set, a pagination footer is shown.
   final Pagination? pagination;
+
+  /// Called when the user requests a different page or page size.
   final Function(int newPage, int pageSize)? onPageChanged;
+
+  /// The column definitions describing each column.
   final List<ColumnDef<T>> columns;
+
+  /// Builds the widget shown when there are no rows.
   final Widget Function()? emptyState;
+
+  /// Minimum table width in logical pixels before horizontal scrolling.
   final double minWidth;
+
+  /// Height of each data row in logical pixels.
   final double rowHeight;
+
+  /// Called when a row is tapped, with the item and its 1-based index.
   final void Function(T item, int index)? onRowTap;
+
+  /// Optional title shown in the table header.
   final String? tableName;
+
+  /// Called with the search term; enables remote search when provided.
   final void Function(String searchTerm)? onSearch;
+
+  /// Builds the searchable string for an item used by local search.
   final String Function(T item)? searchStringBuilder;
 
-  // Date filter
+  /// Whether to show the date filter control in the header.
   final bool enableDateFilter;
+
+  /// Called when the date filter changes (or is cleared with `null`).
   final void Function(DateFilterValue?)? onDateFilterChanged;
 
-  // New features
+  /// Whether per-row selection checkboxes are shown.
   final bool enableRowSelection;
+
+  /// Called with the currently selected items when the selection changes.
   final void Function(List<T> selectedItems)? onRowSelectionChanged;
+
+  /// The current loading state controlling which view is rendered.
   final TableLoadingState loadingState;
+
+  /// Message shown when [loadingState] is [TableLoadingState.error].
   final String? errorMessage;
+
+  /// UI labels and feature toggles for the table.
   final TableConfig config;
 
+  /// Creates a dynamic data table.
   const DynamicDataTable({
     super.key,
     required this.data,

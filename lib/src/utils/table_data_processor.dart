@@ -3,13 +3,25 @@ import '../models/column_def.dart';
 
 /// Pure functions for filtering, searching, and data processing.
 class TableDataProcessor<T> {
+  /// The raw, unfiltered rows.
   final List<T> data;
-  final List<ColumnDef<T>> columns;
-  final String Function(T item)? searchStringBuilder;
-  final String searchTerm;
-  final Map<String, Set<String>> activeFilters;
-  final bool useRemoteSearch; // if true, data is already filtered externally
 
+  /// The column definitions used for searching and filtering.
+  final List<ColumnDef<T>> columns;
+
+  /// Builds the searchable string for an [item]; falls back to cell text.
+  final String Function(T item)? searchStringBuilder;
+
+  /// The current search query.
+  final String searchTerm;
+
+  /// Active column filters, mapping column id to the set of allowed values.
+  final Map<String, Set<String>> activeFilters;
+
+  /// If true, [data] is already filtered by search externally (remote search).
+  final bool useRemoteSearch;
+
+  /// Creates a processor over [data] with the given search and filter state.
   TableDataProcessor({
     required this.data,
     required this.columns,
@@ -19,9 +31,11 @@ class TableDataProcessor<T> {
     required this.useRemoteSearch,
   });
 
+  /// The columns that are currently visible.
   List<ColumnDef<T>> get visibleColumns =>
       columns.where((c) => c.visible).toList();
 
+  /// Whether a non-empty [searchTerm] is active.
   bool get hasSearch => searchTerm.isNotEmpty;
 
   /// Returns unique filterable values for a given column.

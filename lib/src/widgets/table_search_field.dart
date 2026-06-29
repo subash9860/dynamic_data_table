@@ -1,13 +1,26 @@
 import 'package:flutter/material.dart';
 
+/// A styled search text field with a clear button used in the table header.
 class TableSearchField extends StatelessWidget {
+  /// Controller for the underlying text field.
   final TextEditingController controller;
+
+  /// Called when the text changes.
   final void Function(String) onChanged;
+
+  /// Called when the clear button is pressed.
   final VoidCallback onClear;
+
+  /// Whether the field currently has text (controls the clear button).
   final bool hasText;
+
+  /// Fixed width in logical pixels; when `null` the field expands to fit.
   final double? width;
+
+  /// Placeholder text shown when the field is empty.
   final String hintText;
 
+  /// Creates a search field.
   const TableSearchField({
     super.key,
     required this.controller,

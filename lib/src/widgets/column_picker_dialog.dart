@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import '../models/column_def.dart';
 
+/// A dialog that toggles the visibility of each [ColumnDef] in the table.
 class ColumnPickerDialog<T> extends StatelessWidget {
+  /// The columns whose visibility can be toggled.
   final List<ColumnDef<T>> columns;
+
+  /// Called when the user applies the visibility changes.
   final VoidCallback onApply;
 
+  /// Creates a column picker dialog.
   const ColumnPickerDialog({
     super.key,
     required this.columns,

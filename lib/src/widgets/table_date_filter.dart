@@ -4,9 +4,13 @@ import '../models/date_filter_model.dart';
 
 /// A compact button that shows the active date filter and opens a picker dialog.
 class TableDateFilter extends StatelessWidget {
+  /// The currently active date filter, or `null` when none is set.
   final DateFilterValue? value;
+
+  /// Called when the user picks a new filter or clears it with `null`.
   final ValueChanged<DateFilterValue?> onChanged;
 
+  /// Creates a date filter button.
   const TableDateFilter({
     super.key,
     required this.value,

@@ -4,23 +4,49 @@ import 'table_date_filter.dart';
 import 'table_search_field.dart';
 import '../models/table_config.dart';
 
+/// The header bar above the table: title, search field, optional date filter,
+/// column picker and export controls. Responsive between mobile and desktop.
 class DynamicTableHeader extends StatelessWidget {
+  /// Optional table title shown on the left.
   final String? tableName;
+
+  /// Controller for the search text field.
   final TextEditingController searchController;
+
+  /// Called when the search text changes.
   final ValueChanged<String> onSearchChanged;
+
+  /// Called when the search field is cleared.
   final VoidCallback onClearSearch;
+
+  /// Whether the search field currently has text.
   final bool hasSearchText;
+
+  /// Called when the column picker button is pressed.
   final VoidCallback onColumnPicker;
+
+  /// Number of currently visible columns (for the "Columns (x/y)" label).
   final int visibleColumnsCount;
+
+  /// Total number of columns (for the "Columns (x/y)" label).
   final int totalColumnsCount;
+
+  /// Called when the export button is pressed.
   final VoidCallback onExport;
 
+  /// Whether the date filter control is shown.
   final bool enableDateFilter;
+
+  /// The current date filter value, if any.
   final DateFilterValue? dateFilterValue;
+
+  /// Called when the date filter changes (or is cleared with `null`).
   final ValueChanged<DateFilterValue?>? onDateFilterChanged;
 
+  /// UI labels and feature toggles for the header.
   final TableConfig config;
 
+  /// Creates the table header bar.
   const DynamicTableHeader({
     super.key,
     this.tableName,

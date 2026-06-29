@@ -3,12 +3,22 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import '../models/column_def.dart';
 
+/// A dialog that lets the user pick which values to keep for a single
+/// filterable [column].
 class FilterDialog<T> extends StatelessWidget {
+  /// The column being filtered.
   final ColumnDef<T> column;
+
+  /// All distinct values available for the column.
   final List<String> uniqueValues;
+
+  /// The values currently selected when the dialog opens.
   final Set<String> initialSelected;
+
+  /// Called with the chosen values when the user applies the filter.
   final ValueChanged<Set<String>> onApply;
 
+  /// Creates a filter dialog for [column].
   const FilterDialog({
     super.key,
     required this.column,

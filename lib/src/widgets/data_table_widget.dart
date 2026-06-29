@@ -4,24 +4,55 @@ import '../models/column_def.dart';
 import '../models/row_selection_state.dart';
 import 'sort_indicator.dart';
 
+/// Renders the actual scrollable data grid (header, rows and totals) for a
+/// set of [columns] and [data].
+///
+/// This is the low-level grid used internally by [DynamicDataTable]; it is
+/// exported for advanced use cases that compose the table manually.
 class DataTableWidget<T> extends StatelessWidget {
+  /// The visible columns to render.
   final List<ColumnDef<T>> columns;
+
+  /// The rows to render.
   final List<T> data;
+
+  /// Height of each data row in logical pixels.
   final double rowHeight;
+
+  /// Minimum table width before horizontal scrolling.
   final double minWidth;
+
+  /// Called when a row is tapped, with the item and its 1-based index.
   final void Function(T item, int index)? onRowTap;
+
+  /// Active column filters, used to highlight filtered columns.
   final Map<String, Set<String>> activeFilters;
+
+  /// Called when a column's filter button is pressed.
   final void Function(ColumnDef<T> column) onFilterPressed;
 
+  /// Whether per-row selection checkboxes are shown.
   final bool enableRowSelection;
+
+  /// The current row selection state.
   final RowSelectionState<T>? selectedRows;
+
+  /// Called when a row's selection checkbox is toggled, with its index.
   final void Function(int index)? onRowSelectionChanged;
+
+  /// Called when the header "select all" checkbox is toggled.
   final void Function()? onSelectAllChanged;
 
+  /// Id of the column currently sorted, if any.
   final String? activeSortColumnId;
+
+  /// Whether the active sort is ascending.
   final bool sortAscending;
+
+  /// Called when a column header requests a sort, with the column id.
   final void Function(String columnId)? onSort;
 
+  /// Creates the data grid widget.
   const DataTableWidget({
     super.key,
     required this.columns,

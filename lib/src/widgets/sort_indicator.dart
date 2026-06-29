@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 
+/// A tappable header icon showing whether a column is sorted and in which
+/// direction.
 class SortIndicator extends StatelessWidget {
+  /// Id of the column this indicator belongs to.
   final String columnId;
+
+  /// Id of the column currently being sorted, if any.
   final String? activeSortColumnId;
+
+  /// Whether the active sort is ascending.
   final bool sortAscending;
+
+  /// Called when the indicator is tapped to change the sort.
   final VoidCallback onSort;
 
+  /// Creates a sort indicator for [columnId].
   const SortIndicator({
     super.key,
     required this.columnId,
@@ -14,6 +24,7 @@ class SortIndicator extends StatelessWidget {
     required this.onSort,
   });
 
+  /// Whether this column is the one currently being sorted.
   bool get isActive => activeSortColumnId == columnId;
 
   @override

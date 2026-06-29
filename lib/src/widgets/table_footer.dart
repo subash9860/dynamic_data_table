@@ -116,17 +116,35 @@
 
 import 'package:flutter/material.dart';
 
+/// The footer below the table showing page info and pagination controls,
+/// including a rows-per-page selector. Responsive between small and wide
+/// layouts.
 class TablePaginationFooter extends StatelessWidget {
+  /// The current 1-based page number.
   final int currentPage;
+
+  /// The total number of pages.
   final int totalPages;
+
+  /// The total number of items across all pages.
   final int totalItems;
+
+  /// The current number of rows shown per page.
   final int rowsPerPage;
 
+  /// Selectable page-size options.
   final List<int> rowsPerPageOptions;
+
+  /// Called when the user selects a different page size.
   final Function(int) onRowsPerPageChanged;
+
+  /// Called when the previous-page button is pressed.
   final VoidCallback onPrevious;
+
+  /// Called when the next-page button is pressed.
   final VoidCallback onNext;
 
+  /// Creates a pagination footer.
   const TablePaginationFooter({
     super.key,
     required this.currentPage,

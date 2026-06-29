@@ -1,17 +1,36 @@
 import 'package:intl/intl.dart';
 
+/// Predefined date ranges (plus custom options) used by the table's date
+/// filter.
 enum DateFilterPreset {
+  /// The current day.
   today,
+
+  /// The previous day.
   yesterday,
+
+  /// The current calendar week (Monday–Sunday).
   thisWeek,
+
+  /// The previous calendar week.
   lastWeek,
+
+  /// The current calendar month.
   thisMonth,
+
+  /// The previous calendar month.
   lastMonth,
+
+  /// A single user-picked date.
   customDate,
+
+  /// A user-picked start/end date range.
   customDateRange,
 }
 
+/// Provides a human-readable [label] for each [DateFilterPreset].
 extension DateFilterPresetLabel on DateFilterPreset {
+  /// Display label for the preset, e.g. "This Week".
   String get label {
     switch (this) {
       case DateFilterPreset.today:
@@ -34,16 +53,22 @@ extension DateFilterPresetLabel on DateFilterPreset {
   }
 }
 
+/// An active date filter selection: a [preset] plus any custom dates it needs.
 class DateFilterValue {
+  /// The selected preset that determines the effective range.
   final DateFilterPreset preset;
 
   /// Only set when [preset] is [DateFilterPreset.customDate].
   final DateTime? customDate;
 
-  /// Only set when [preset] is [DateFilterPreset.customDateRange].
+  /// Range start; only set when [preset] is
+  /// [DateFilterPreset.customDateRange].
   final DateTime? rangeStart;
+
+  /// Range end; only set when [preset] is [DateFilterPreset.customDateRange].
   final DateTime? rangeEnd;
 
+  /// Creates a date filter value for the given [preset].
   const DateFilterValue({
     required this.preset,
     this.customDate,
@@ -122,6 +147,7 @@ class DateFilterValue {
     }
   }
 
+  /// Returns a copy of this value with the given fields replaced.
   DateFilterValue copyWith({
     DateFilterPreset? preset,
     DateTime? customDate,

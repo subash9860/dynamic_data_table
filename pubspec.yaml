@@ -13,13 +13,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  data_table_2: ^2.6.0
-  intl: ^0.20.2
-  file_saver: ^0.0.7
-  open_file: ^3.5.11
-  path_provider: ^2.1.0
+  data_table_2: ^2.7.2
+  intl: ^0.20.3
+  open_file: ">=3.5.11 <5.0.0"
+  path_provider: ^2.1.6
   web: ^1.1.1
-  syncfusion_flutter_xlsio: ^31.1.19
+  syncfusion_flutter_xlsio: ^31.2.18
 
 dev_dependencies:
   flutter_test:
