@@ -1,3 +1,7 @@
+## 1.0.9
+
+- chore: update docs
+
 ## 1.0.8
 
 - Updates and improvements.
